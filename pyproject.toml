@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-vuln-scanner"
+version = "0.1.0"
+description = "Safe, non-destructive OWASP Top 10-flavoured web vulnerability scanner"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0"}
+dependencies = ["aiohttp>=3.9"]
+
+[project.scripts]
+web-vuln-scanner = "web_vuln_scanner.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["web_vuln_scanner*"]
